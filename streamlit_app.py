@@ -13,6 +13,6 @@ df = pd.DataFrame(
 c = alt.Chart(df).mark_circle().encode(
     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
-st.write(c)
+st.write('Example Randomized Dataplot', c)
 
 st.text('gg ez')
