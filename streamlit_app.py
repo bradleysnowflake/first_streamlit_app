@@ -1,8 +1,18 @@
-import streamlit 
+import streamlit as st
+import pandas as pd
+import numpy as np
+import altair as alt
 
-streamlit.title('Snowflake Application Builder Test App deployed via Streamlit')
+st.title('Snowflake Web Application')
+st.header('Deployed via Streamlit')
 
-streamlit.header('gg ez')
+df = pd.DataFrame(
+    np.random.randn(200, 3),
+    columns=['a', 'b', 'c'])
 
-streamlit.text('Example of display text')
-streamlit.text('Another example of display text')
+c = alt.Chart(df).mark_circle().encode(
+    x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
+st.write(c)
+
+st.text('gg ez')
