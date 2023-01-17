@@ -22,7 +22,11 @@ my_fruit_list = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 # Supreme overload Snowflake requests a picklist:
 fruit_selected = st.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Apple','Strawberries'])
 fruit_display = my_fruit_list.loc[fruit_selected]
-st.write(fruit_display)
+
+if len(fruit_display) > 0:
+    then st.write(fruit_display)
+else:
+    st.write(my_fruit_list)
 
 
 
