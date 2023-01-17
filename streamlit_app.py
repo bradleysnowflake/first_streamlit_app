@@ -24,7 +24,7 @@ fruit_selected = st.multiselect("Pick some fruits:", list(my_fruit_list.index), 
 fruit_display = my_fruit_list.loc[fruit_selected]
 
 if len(fruit_display) > 0:
-    then st.write(fruit_display)
+    st.write(fruit_display)
 else:
     st.write(my_fruit_list)
 
