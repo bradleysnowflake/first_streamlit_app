@@ -20,7 +20,7 @@ st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 st.text('Smoothie Macro Calculator')
 my_fruit_list = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt', index_col = 'Fruit')
 # Supreme overload Snowflake requests a picklist:
-st.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Apple','Mango'])
+st.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Apple','Strawberries'])
 
 st.write(my_fruit_list)
 
