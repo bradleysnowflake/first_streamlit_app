@@ -15,4 +15,10 @@ c = alt.Chart(df).mark_circle().encode(
 
 st.write('Example Randomized Dataplot', c)
 
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+
+
+
+
+
 st.text('gg ez')
