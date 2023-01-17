@@ -6,14 +6,16 @@ import altair as alt
 st.title('Snowflake Web Application')
 st.header('Deployed via Streamlit')
 
-df = pd.DataFrame(
-    np.random.randn(200, 3),
-    columns=['a', 'b', 'c'])
+with st.echo(code_location='below'):
+    # execute below to show the backend:
+    df = pd.DataFrame(
+        np.random.randn(200, 3),
+        columns=['a', 'b', 'c'])
 
-c = alt.Chart(df).mark_circle().encode(
-    x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+    c = alt.Chart(df).mark_circle().encode(
+        x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
-st.write('Example Randomized Dataplot', c)
+    st.write('Example Randomized Dataplot', c)
 
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
