@@ -16,7 +16,7 @@ c = alt.Chart(df).mark_circle().encode(
 st.write('Example Randomized Dataplot', c)
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-my_fruit_list = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
+my_fruit_list = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt', index_col = 'Fruit')
 st.write(my_fruit_list)
 
 
